@@ -22,7 +22,7 @@ jobs:
     - name: Загрузка Ngrok файла.
       run: Expand-Archive ngrok.zip
     - name: Подключение к учётной записи Ngrok.
-      run: .\ngrok\ngrok.exe authtoken 2uXW55i5qteXkJu2QMtMF3vm429_5cV5jmzNj9FUY3cAZeSFN
+      run: .\ngrok\ngrok config add-authtoken 2uXW55i5qteXkJu2QMtMF3vm429_5cV5jmzNj9FUY3cAZeSFN
       
     - name: Включение доступа RDP.
       run: | 
