@@ -22,7 +22,7 @@ jobs:
     - name: Загрузка Ngrok файла.
       run: Expand-Archive ngrok.zip
     - name: Подключение к учётной записи Ngrok.
-      run: .\ngrok\ngrok config add-authtoken 2uXW55i5qteXkJu2QMtMF3vm429_5cV5jmzNj9FUY3cAZeSFN
+      run: .\ngrok\ngrok authtoken 2uXW55i5qteXkJu2QMtMF3vm429_5cV5jmzNj9FUY3cAZeSFN
       
     - name: Включение доступа RDP.
       run: | 
@@ -33,7 +33,7 @@ jobs:
         copy "FastConfigVPS_v2.3.exe" "C:\Users\Public\Desktop\FastConfigVPS_v2.3.exe"
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
     - name: Создание туннелей.
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
+      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389 authtoken 2uXW55i5qteXkJu2QMtMF3vm429_5cV5jmzNj9FUY3cAZeSFN"'
     - name: Подключение к CPU 2 - 7 ГБ оперативной памяти - 256 SSD.
       run: cmd /c start.bat
     - name: Сделано успешно! Вы можете закрыть вкладку.
