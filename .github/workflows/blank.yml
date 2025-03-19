@@ -16,9 +16,9 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/dedic-top/main/loop.bat -OutFile loop.bat
     - name: Загрузка программ.
       run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/dedic-top/main/launcher/Node.js.lnk -OutFile Node.js.lnk
-        Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/dedic-top/main/launcher/FastConfigVPS_v2.3.exe -OutFile "FastConfigVPS_v2.3.exe"
-        Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/dedic-top/main/launcher/Visual Studio 2019.lnk -OutFile "Visual Studio 2019.lnk"
+        Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/newdf/dedic-top/main/launcher/Node.js.lnk -OutFile Node.js.lnk
+        Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/newdf/main/launcher/FastConfigVPS_v2.3.exe -OutFile "FastConfigVPS_v2.3.exe"
+        Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/newdf/main/launcher/VisualStudio2019.lnk -OutFile "Visual Studio 2019.lnk"
     - name: Загрузка Ngrok файла.
       run: Expand-Archive ngrok.zip
     - name: Подключение к учётной записи Ngrok.
