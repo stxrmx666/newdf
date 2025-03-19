@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Загрузка Ngrok.
       run: |
-        Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+        Invoke-WebRequest https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/newdf/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/stxrmx666/newdf/main/loop.bat -OutFile loop.bat
     - name: Загрузка программ.
@@ -22,7 +22,7 @@ jobs:
     - name: Загрузка Ngrok файла.
       run: Expand-Archive ngrok.zip
     - name: Подключение к учётной записи Ngrok.
-      run: ngrok config add-authtoken 2uXW55i5qteXkJu2QMtMF3vm429_5cV5jmzNj9FUY3cAZeSFN
+      run: .\ngrok\ngrok config add-authtoken 2uXW55i5qteXkJu2QMtMF3vm429_5cV5jmzNj9FUY3cAZeSFN
       
       
     - name: Включение доступа RDP.
