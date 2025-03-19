@@ -34,7 +34,7 @@ jobs:
         copy "FastConfigVPS_v2.3.exe" "C:\Users\Public\Desktop\FastConfigVPS_v2.3.exe"
         copy "Visual Studio 2019.lnk" "C:\Users\Public\Desktop\Visual Studio 2019.lnk"
     - name: Создание туннелей.
-      run: .\ngrok\ngrok tcp 3389
+      run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp --region ap 3389"'
     - name: Подключение к CPU 2 - 7 ГБ оперативной памяти - 256 SSD.
       run: cmd /c start.bat
     - name: Сделано успешно! Вы можете закрыть вкладку.
